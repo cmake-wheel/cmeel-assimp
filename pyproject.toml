@@ -1,6 +1,6 @@
 [project]
 name = "cmeel-assimp"
-version = "5.2.3"
+version = "5.2.4"
 description = "cmeel distribution for assimp, Open-Asset-Importer-Library Repository"
 readme = "assimp/Readme.md"
 requires-python = ">= 3.8"

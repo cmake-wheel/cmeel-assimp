@@ -3,7 +3,7 @@ name = "cmeel-assimp"
 version = "5.2.4"
 description = "cmeel distribution for assimp, Open-Asset-Importer-Library Repository"
 readme = "assimp/Readme.md"
-requires-python = ">= 3.8"
+requires-python = ">= 3.7"
 license = "BSD-3-Clause"
 
 [project.urls]

@@ -1,9 +1,6 @@
 name: Release on GitHub & PyPI
 
-on:
-  push:
-    tags:
-      - "v*"
+on: [push]
 
 jobs:
   build_wheels_macos:
@@ -37,7 +34,7 @@ jobs:
     strategy:
       matrix:
         os: ["ubuntu-latest"]
-        archs: ["x86_64", "aarch64", "s390x"]
+        arch: ["x86_64", "aarch64", "s390x"]
         build: [
           "cp37-manylinux*",
           "cp37-musllinux*",
@@ -88,9 +85,9 @@ jobs:
         with:
           python-version: "3.10"
       - uses: actions/download-artifact@v3
-      - run: python -m pip install twine
-      - run: python -m twine upload -u __token__ -p ${{ secrets.PYPI_TOKEN }} artifact/cmeel_assimp*.whl
-      - run: echo "TAG=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
-      - run: gh release create -t "Release ${{ env.TAG}}" ${{ env.TAG }} artifact/cmeel_assimp*.whl
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #- run: python -m pip install twine
+      #- run: python -m twine upload -u __token__ -p ${{ secrets.PYPI_TOKEN }} artifact/cmeel_assimp*.whl
+      #- run: echo "TAG=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+      #- run: gh release create -t "Release ${{ env.TAG}}" ${{ env.TAG }} artifact/cmeel_assimp*.whl
+        #env:
+          #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

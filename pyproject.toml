@@ -10,7 +10,9 @@ license = "BSD-3-Clause"
 homepage = "https://github.com/cmake-wheel/cmeel-assimp"
 repository = "https://github.com/cmake-wheel/cmeel-assimp.git"
 
+[tool.cmeel]
+source = "assimp"
+
 [build-system]
 requires = ["cmeel[build]"]
 build-backend = "cmeel.build"
-source = "assimp"

@@ -12,6 +12,7 @@ repository = "https://github.com/cmake-wheel/cmeel-assimp.git"
 
 [tool.cmeel]
 source = "assimp"
+build-number = 1
 
 [build-system]
 requires = ["cmeel[build]"]

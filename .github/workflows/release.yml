@@ -14,7 +14,7 @@ jobs:
         os: ["ubuntu", "macos"]
         arch: ["x86_64"]
         build: ["cp37-*", "cp38-*", "cp39-*", "cp310-*", "cp311-*", "pp37-*", "pp38-*", "pp39-*"]
-        include:
+        #include:
           #- arch: "aarch64"
             #os: "ubuntu"
             #build: "cp37-manylinux*"

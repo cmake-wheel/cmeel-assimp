@@ -13,9 +13,9 @@ jobs:
       matrix:
         image: ["manylinux2014", "musllinux_1_1"]
         arch: ["x86_64", "aarch64"]
-      exclude:
-        image: "musllinux_1_1"
-        arch: "aarch64"
+        exclude:
+          image: "musllinux_1_1"
+          arch: "aarch64"
     steps:
       - uses: actions/checkout@v3
         with:

@@ -7,7 +7,7 @@ on:
 
 jobs:
   linux:
-    name: "${{ matrix.image }} ${{ matrix.aarch }}"
+    name: "${{ matrix.image }} ${{ matrix.arch }}"
     runs-on: "ubuntu-latest"
     strategy:
       matrix:
@@ -25,7 +25,7 @@ jobs:
           python-version: "3.10"
           cache: 'pip'
       - name: Set up QEMU
-        if: matrix.aarch == 'aarch64'
+        if: matrix.arch == 'aarch64'
         uses: docker/setup-qemu-action@v2
         with:
           platforms: all

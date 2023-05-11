@@ -14,7 +14,7 @@ homepage = "https://github.com/cmake-wheel/cmeel-assimp"
 repository = "https://github.com/cmake-wheel/cmeel-assimp.git"
 
 [tool.cmeel]
-build-number = 10
+build-number = 11
 configure-args = ["-DASSIMP_BUILD_ASSIMP_TOOLS=ON", "-DASSIMP_WARNINGS_AS_ERRORS=OFF"]
 py3-none = true
 source = "assimp"

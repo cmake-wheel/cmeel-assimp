@@ -1,12 +1,12 @@
 [build-system]
-build-backend = "cmeel.build"
+build-backend = "cmeel"
 requires = ["cmeel[build]"]
 
 [project]
 description = "cmeel distribution for assimp, Open-Asset-Importer-Library Repository"
 license = "BSD-3-Clause"
 name = "cmeel-assimp"
-requires-python = ">= 3.7"
+requires-python = ">= 3.8"
 version = "5.2.5.1"
 
 [project.urls]

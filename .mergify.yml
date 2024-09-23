@@ -1,11 +1,13 @@
 pull_request_rules:
   - name: merge automatically when CI passes and PR is approved
     conditions:
-      - check-success = lint
-      - check-success = Nix build on ubuntu
-      - check-success = Nix build on macos
-      - check-success = tests
-      - check-success = test-entrypoints
+      - check-success = manylinux_2_28 x86_64
+      - check-success = manylinux_2_28 aarch64
+      - check-success = musllinux_1_1 x86_64
+      - check-success = macos
+      - check-success = sdist
+      - check-success = release
+      - check-success = pre-commit.ci - pr
       - or:
         - approved-reviews-by = nim65s
         - author = nim65s

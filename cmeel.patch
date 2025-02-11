@@ -1,6 +1,19 @@
 --- assimp/code/CMakeLists.txt.orig	2025-02-11 01:18:39.000000000 +0100
-+++ assimp/code/CMakeLists.txt	2025-02-11 14:05:34.622797702 +0100
-@@ -1435,7 +1435,7 @@
++++ assimp/code/CMakeLists.txt	2025-02-11 14:17:31.611833198 +0100
+@@ -1330,6 +1330,12 @@
+ ADD_LIBRARY( assimp ${assimp_src} )
+ ADD_LIBRARY(assimp::assimp ALIAS assimp)
+
++if(APPLE)
++  set_target_properties(assimp PROPERTIES INSTALL_RPATH "@loader_path")
++else()
++  set_target_properties(assimp PROPERTIES INSTALL_RPATH "\$ORIGIN")
++endif()
++
+ # Add or remove dllexport tags depending on the library type.
+ IF (BUILD_SHARED_LIBS)
+   TARGET_COMPILE_DEFINITIONS(assimp PRIVATE ASSIMP_BUILD_DLL_EXPORT)
+@@ -1435,7 +1441,7 @@
      target_link_libraries(assimp PRIVATE ${draco_LIBRARIES})
    endif()
  ELSE()

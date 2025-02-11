@@ -7,7 +7,7 @@ description = "cmeel distribution for assimp, Open-Asset-Importer-Library Reposi
 license = "BSD-3-Clause"
 name = "cmeel-assimp"
 requires-python = ">= 3.8"
-version = "5.3.1"
+version = "5.4.2"
 
 [project.urls]
 homepage = "https://github.com/cmake-wheel/cmeel-assimp"

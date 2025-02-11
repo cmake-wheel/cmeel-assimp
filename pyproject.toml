@@ -1,8 +1,9 @@
 [build-system]
 build-backend = "cmeel"
-requires = ["cmeel[build]"]
+requires = ["cmeel-zlib", "cmeel[build]"]
 
 [project]
+dependencies = ["cmeel-zlib"]
 description = "cmeel distribution for assimp, Open-Asset-Importer-Library Repository"
 license = "BSD-3-Clause"
 name = "cmeel-assimp"

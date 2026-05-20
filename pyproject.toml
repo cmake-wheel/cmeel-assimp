@@ -7,8 +7,8 @@ dependencies = ["cmeel-zlib"]
 description = "cmeel distribution for assimp, Open-Asset-Importer-Library Repository"
 license = "BSD-3-Clause"
 name = "cmeel-assimp"
-requires-python = ">= 3.9"
-version = "6.0.2"
+requires-python = ">= 3.10"
+version = "6.0.5"
 
 [project.urls]
 homepage = "https://github.com/cmake-wheel/cmeel-assimp"
